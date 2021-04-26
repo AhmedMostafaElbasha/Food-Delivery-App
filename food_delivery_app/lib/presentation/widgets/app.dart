@@ -16,10 +16,13 @@ class App extends StatelessWidget {
       allowFontScaling: false,
       builder: () {
         return MaterialApp(
-          initialRoute: AppRoutes.home,
+          initialRoute: AppRoutes.mainScreen,
           routes: AppRoutes.routes,
           debugShowCheckedModeBanner: false,
-          title: 'Crypto Currency App',
+          title: 'Food Delivery App',
+          theme: ThemeData(
+            primaryColor: AppColors.blueAccent,
+          ),
           supportedLocales: [
             const Locale('en'),
             const Locale('ar'),

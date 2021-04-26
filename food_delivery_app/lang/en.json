@@ -1,1 +1,18 @@
-{}
+{
+    "what_would_heading": "What would",
+    "you_like_to_eat_heading": "you like to eat?",
+    "burger_category": "Burger",
+    "pizza_category": "Pizza",
+    "coffee_cup_category": "Coffee Cup",
+    "beer_category": "Beer",
+    "cheese_burger_category": "Cheese Burger",
+    "search_hint": "Search for a meal.",
+    "frequently_bought_foods_title": "Frequently Bought Foods",
+    "view_all_button": "View All",
+    "min_order": "Min order",
+    "reviews": "Reviews",
+    "home_tab": "Home",
+    "orders_tab": "Orders",
+    "favorite_tab": "Favorite",
+    "profile_tab": "Profile"
+}
