@@ -15,4 +15,16 @@ class AppStrings {
   static String ordersTab = 'orders_tab';
   static String favoriteTab = 'favorite_tab';
   static String profileTab = 'profile_tab';
+  static String ordersPageAppBarTitle = 'orders_page_app_bar_title';
+  static String subTotal = 'sub_total';
+  static String discount = 'discount';
+  static String tax = 'tax';
+  static String total = 'total';
+  static String proceedToCheckout = 'proceed_to_checkout';
+  static String signIn = 'sign_in';
+  static String usernameHint = 'username_hint';
+  static String passwordHint = 'password_hint';
+  static String forgetPassword = 'forget_password';
+  static String dontHaveAnAccount = 'dont_have_an_account';
+  static String signUp = 'sign_up';
 }

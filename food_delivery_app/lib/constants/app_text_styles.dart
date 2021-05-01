@@ -21,4 +21,11 @@ class AppTextStyles {
       fontWeight: FontWeight.bold,
     );
   }
+
+  static TextStyle get textFieldHint {
+    return TextStyle(
+      color: AppColors.cyanBlue,
+      fontSize: 18,
+    );
+  }
 }

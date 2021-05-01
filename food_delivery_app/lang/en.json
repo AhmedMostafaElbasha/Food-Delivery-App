@@ -14,5 +14,17 @@
     "home_tab": "Home",
     "orders_tab": "Orders",
     "favorite_tab": "Favorite",
-    "profile_tab": "Profile"
+    "profile_tab": "Profile",
+    "orders_page_app_bar_title": "Your Food Cart",
+    "sub_total": "Sub Total",
+    "discount": "Discount",
+    "tax": "Tax",
+    "total": "Total",
+    "proceed_to_checkout": "Proceed To Checkout",
+    "sign_in": "Sign In",
+    "username_hint": "Your email or username",
+    "password_hint": "Password",
+    "forget_password": "Forget Password?",
+    "dont_have_an_account": "Don't have an account? ",
+    "sign_up": "sign up"
 }

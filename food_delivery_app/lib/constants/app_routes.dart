@@ -6,6 +6,7 @@ class AppRoutes {
   static String ordersPage = '/orders_page';
   static String favoritePage = '/favorite_page';
   static String profilePage = '/profile_page';
+  static String signInScreen = '/sign_in_screen';
 
   static var routes = {
     mainScreen: (_) => MainScreen(),
@@ -13,5 +14,6 @@ class AppRoutes {
     ordersPage: (_) => OrdersPage(),
     favoritePage: (_) => FavoritePage(),
     profilePage: (_) => ProfilePage(),
+    signInScreen: (_) => SignInScreen(),
   };
 }

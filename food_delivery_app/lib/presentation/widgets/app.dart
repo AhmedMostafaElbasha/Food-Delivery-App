@@ -16,7 +16,7 @@ class App extends StatelessWidget {
       allowFontScaling: false,
       builder: () {
         return MaterialApp(
-          initialRoute: AppRoutes.mainScreen,
+          initialRoute: AppRoutes.signInScreen,
           routes: AppRoutes.routes,
           debugShowCheckedModeBanner: false,
           title: 'Food Delivery App',
