@@ -22,9 +22,13 @@
     "total": "Total",
     "proceed_to_checkout": "Proceed To Checkout",
     "sign_in": "Sign In",
-    "username_hint": "Your email or username",
+    "sign_in_username_hint": "Your email or username",
     "password_hint": "Password",
     "forget_password": "Forget Password?",
-    "dont_have_an_account": "Don't have an account? ",
-    "sign_up": "sign up"
+    "dont_have_an_account": "Don't have an account?",
+    "sign_up": "Sign Up",
+    "username_hint": "Username",
+    "confirm_password_hint": "Confirm Password",
+    "email_hint": "Email",
+    "already_have_an_account": "Already have an account?"
 }

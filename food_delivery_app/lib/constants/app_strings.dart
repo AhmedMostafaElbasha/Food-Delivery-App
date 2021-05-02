@@ -22,9 +22,13 @@ class AppStrings {
   static String total = 'total';
   static String proceedToCheckout = 'proceed_to_checkout';
   static String signIn = 'sign_in';
-  static String usernameHint = 'username_hint';
+  static String signInUsernameHint = 'sign_in_username_hint';
   static String passwordHint = 'password_hint';
   static String forgetPassword = 'forget_password';
   static String dontHaveAnAccount = 'dont_have_an_account';
   static String signUp = 'sign_up';
+  static String usernameHint = 'username_hint';
+  static String confirmPasswordHint = 'confirm_password_hint';
+  static String emailHint = 'email_hint';
+  static String alreadyHaveAnAccount = 'already_have_an_account';
 }

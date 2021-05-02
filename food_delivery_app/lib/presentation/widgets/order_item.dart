@@ -99,7 +99,7 @@ class OrderItem extends StatelessWidget {
                     bottom: ScreenUtil().setHeight(5),
                   ),
                   child: AppTextDisplay(
-                    text: "3.0",
+                    text: "\$3.0",
                     textStyle: AppTextStyles.seeAll,
                   ),
                 ),

@@ -51,21 +51,21 @@ class OrdersPage extends StatelessWidget {
               padding: EdgeInsets.only(bottom: ScreenUtil().setHeight(10)),
               child: _totalPriceDetailDisplay(
                 AppStrings.subTotal,
-                "23.0",
+                "\$23.0",
               ),
             ),
             Padding(
               padding: EdgeInsets.only(bottom: ScreenUtil().setHeight(10)),
               child: _totalPriceDetailDisplay(
                 AppStrings.discount,
-                "10.0",
+                "\$10.0",
               ),
             ),
             Padding(
               padding: EdgeInsets.only(bottom: ScreenUtil().setHeight(10)),
               child: _totalPriceDetailDisplay(
                 AppStrings.tax,
-                "0.5",
+                "\$0.5",
               ),
             ),
             Divider(
@@ -76,7 +76,7 @@ class OrdersPage extends StatelessWidget {
               padding: EdgeInsets.only(top: ScreenUtil().setHeight(20)),
               child: _totalPriceDetailDisplay(
                 AppStrings.total,
-                "26.5",
+                "\$26.5",
               ),
             ),
             Padding(

@@ -80,7 +80,7 @@ class BoughtFoodItem extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 AppTextDisplay(
-                  text: food.price.toString(),
+                  text: '\$${food.price.toString()}',
                   textStyle: AppTextStyles.regularBold.copyWith(
                     fontSize: 18,
                     color: AppColors.orangeAccent,

@@ -22,9 +22,13 @@
     "total": "تترجم",
     "proceed_to_checkout": "تترجم",
     "sign_in": "تترجم",
-    "username_hint": "تترجم",
+    "sign_in_username_hint": "تترجم",
     "password_hint": "تترجم",
     "forget_password": "تترجم",
     "dont_have_an_account": "تترجم",
-    "sign_up": "sign up"
+    "sign_up": "تترجم",
+    "username_hint": "تترجم",
+    "confirm_password_hint": "تترجم",
+    "email_hint": "تترجم",
+    "already_have_an_account": "تترجم"
 }

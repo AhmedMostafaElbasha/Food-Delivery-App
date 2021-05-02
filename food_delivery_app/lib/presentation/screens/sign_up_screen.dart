@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:food_delivery_app/presentation/presentation.dart';
+import 'package:food_delivery_app/utilities/utilities.dart';
 import 'package:food_delivery_app/constants/constants.dart';
-import 'package:food_delivery_app/utilities/app_localizations.dart';
+import 'package:food_delivery_app/presentation/presentation.dart';
 
-class SignInScreen extends StatefulWidget {
+class SignUpScreen extends StatefulWidget {
   @override
-  _SignInScreenState createState() => _SignInScreenState();
+  _SignUpScreenState createState() => _SignUpScreenState();
 }
 
-class _SignInScreenState extends State<SignInScreen> {
-  bool _toggleVisibility = false;
+class _SignUpScreenState extends State<SignUpScreen> {
+  bool _togglePasswordVisibility = false;
+  bool _toggleConfirmPasswordVisibility = false;
 
   @override
   Widget build(BuildContext context) {
@@ -26,12 +27,11 @@ class _SignInScreenState extends State<SignInScreen> {
               ),
               child: Column(
                 children: [
-                  _signInText(),
-                  _forgetPasswordButton(),
+                  _signUpText(),
                   _loginUserInput(),
-                  _signInButton(),
+                  _signUpButton(),
                   Divider(height: ScreenUtil().setHeight(20)),
-                  _signUpOption(),
+                  _signInOption(),
                 ],
               ),
             ),
@@ -41,66 +41,46 @@ class _SignInScreenState extends State<SignInScreen> {
     );
   }
 
-  Widget _signInText() {
+  Widget _signUpText() {
     return Padding(
       padding: EdgeInsets.only(
         top: ScreenUtil().setHeight(70),
         bottom: ScreenUtil().setHeight(100),
       ),
       child: AppTextDisplay(
-        translation: AppStrings.signIn,
+        translation: AppStrings.signUp,
         textAlign: TextAlign.center,
         textStyle: AppTextStyles.regularBold.copyWith(fontSize: 40),
       ),
     );
   }
 
-  Widget _usernameTextFormField() {
+  Widget _textFormField(String hint) {
     return TextFormField(
       decoration: InputDecoration(
-        hintText: AppLocalizations.of(context)
-            .translate(AppStrings.signInUsernameHint),
+        hintText: AppLocalizations.of(context).translate(hint),
         hintStyle: AppTextStyles.textFieldHint,
       ),
     );
   }
 
-  Widget _passwordTextFormField() {
+  Widget _passwordTextFormField(String hint, bool isObsecureText) {
     return TextFormField(
       decoration: InputDecoration(
-        hintText:
-            AppLocalizations.of(context).translate(AppStrings.passwordHint),
+        hintText: AppLocalizations.of(context).translate(hint),
         hintStyle: AppTextStyles.textFieldHint,
         suffixIcon: IconButton(
           icon: Icon(
-            _toggleVisibility ? Icons.visibility : Icons.visibility_off,
+            isObsecureText ? Icons.visibility : Icons.visibility_off,
           ),
           onPressed: () {
             setState(() {
-              _toggleVisibility = !_toggleVisibility;
+              isObsecureText = !isObsecureText;
             });
           },
         ),
       ),
-      obscureText: _toggleVisibility,
-    );
-  }
-
-  Widget _forgetPasswordButton() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.end,
-      children: [
-        GestureDetector(
-          onTap: () {},
-          child: AppTextDisplay(
-            translation: AppStrings.forgetPassword,
-            textStyle: AppTextStyles.regularBold.copyWith(
-              fontSize: 18,
-              color: AppColors.blueAccent,
-            ),
-          ),
-        ),
-      ],
+      obscureText: _togglePasswordVisibility,
     );
   }
 
@@ -118,12 +98,18 @@ class _SignInScreenState extends State<SignInScreen> {
           ),
           child: Column(
             children: [
-              _usernameTextFormField(),
-              Padding(
-                padding: EdgeInsets.only(
-                  top: ScreenUtil().setHeight(12),
-                ),
-                child: _passwordTextFormField(),
+              _textFormField(AppStrings.usernameHint),
+              SizedBox(height: ScreenUtil().setHeight(12)),
+              _textFormField(AppStrings.emailHint),
+              SizedBox(height: ScreenUtil().setHeight(12)),
+              _passwordTextFormField(
+                AppStrings.passwordHint,
+                _togglePasswordVisibility,
+              ),
+              SizedBox(height: ScreenUtil().setHeight(12)),
+              _passwordTextFormField(
+                AppStrings.confirmPasswordHint,
+                _togglePasswordVisibility,
               ),
             ],
           ),
@@ -132,7 +118,7 @@ class _SignInScreenState extends State<SignInScreen> {
     );
   }
 
-  Widget _signInButton() {
+  Widget _signUpButton() {
     return Padding(
       padding: EdgeInsets.only(top: ScreenUtil().setHeight(30)),
       child: MaterialButton(
@@ -146,7 +132,7 @@ class _SignInScreenState extends State<SignInScreen> {
         ),
         minWidth: ScreenUtil().screenWidth,
         child: AppTextDisplay(
-          translation: AppStrings.signIn,
+          translation: AppStrings.signUp,
           textStyle: AppTextStyles.regularBold.copyWith(
             color: AppColors.white,
             fontSize: 18,
@@ -156,7 +142,7 @@ class _SignInScreenState extends State<SignInScreen> {
     );
   }
 
-  Widget _signUpOption() {
+  Widget _signInOption() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -165,7 +151,7 @@ class _SignInScreenState extends State<SignInScreen> {
             right: ScreenUtil().setWidth(10),
           ),
           child: AppTextDisplay(
-            translation: AppStrings.dontHaveAnAccount,
+            translation: AppStrings.alreadyHaveAnAccount,
             textStyle: AppTextStyles.textFieldHint.copyWith(
               fontWeight: FontWeight.bold,
             ),
@@ -173,10 +159,10 @@ class _SignInScreenState extends State<SignInScreen> {
         ),
         GestureDetector(
           onTap: () {
-            Navigator.pushNamed(context, AppRoutes.signUpScreen);
+            Navigator.pushNamed(context, AppRoutes.signInScreen);
           },
           child: AppTextDisplay(
-            translation: AppStrings.signUp,
+            translation: AppStrings.signIn,
             textStyle: AppTextStyles.textFieldHint.copyWith(
               fontWeight: FontWeight.bold,
               color: AppColors.blueAccent,
